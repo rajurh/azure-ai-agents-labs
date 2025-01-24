@@ -19,7 +19,7 @@ Lab 1 helps you to learn how to setup the necessary environment for  building th
 * Install the necessary clients environment like Azure ALI, Azure ML extension
 * Connecting to AI Project from VS Code
 
-**Lab 2**
+**Lab 2** <br>
 Lab 2 helps you to learn how to build simple AI Agent that generates bar chart
 
 **Lab 3**
