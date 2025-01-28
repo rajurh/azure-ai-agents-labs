@@ -44,7 +44,7 @@ async def main():
         name="OrchestratorAgent",
         instructions=f"""
             You are an agent designed to create detailed reports about health plans. The user will provide the name of a health plan and you'll use that health paln to create a detailed report. Call the appropriate functions to help write the report. 
-            Do not write the report on your own. Your role is to be an orchestrator who will call the appropriate plugins and functions provided to you.""",
+            Do not write the report on your own. Your role is to be an orchestrator who will call the appropriate plugins and functions provided to you. Only output the report to the user, nothing else.""",
         execution_settings=settings,
     )
 

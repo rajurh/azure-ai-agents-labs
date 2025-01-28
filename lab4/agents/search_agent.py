@@ -11,7 +11,7 @@ class SearchAgent:
     """An agent that is able to search health plan documents."""
 
     @kernel_function(description="Agent that searches health plan documents")
-    def search_plan_docs(self, plan: str) -> str:
+    def search_plan_docs(self, plan_name: str) -> str:
         """Searches an Azure AI Search index for health plan documents."""
         project_client = AIProjectClient.from_connection_string(
             credential=DefaultAzureCredential(),
@@ -34,7 +34,7 @@ class SearchAgent:
         message = project_client.agents.create_message(
             thread_id=thread.id,
             role="user",
-            content=f"Tell me about the {plan} plan.",
+            content=f"Tell me about the {plan_name} plan.",
         )
 
         # Create and process agent run in thread with tools

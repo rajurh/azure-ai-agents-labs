@@ -7,10 +7,10 @@ from azure.identity import DefaultAzureCredential
 load_dotenv()
 
 class ReportAgent:
-    """An agent that helps write detailed reports about health plans."""
+    """An agent that writes detailed reports about health plans."""
 
-    @kernel_function(description="Agent that helps write detailed reports about health plans")
-    def write_report(self, plan: str) -> str:
+    @kernel_function(description="Agent that writes detailed reports about health plans")
+    def write_report(self, plan_name: str, plan_info: str) -> str:
         """Writes a report"""
         project_client = AIProjectClient.from_connection_string(
             credential=DefaultAzureCredential(),
@@ -18,14 +18,14 @@ class ReportAgent:
             )
 
         report_agent = project_client.agents.create_agent(
-        model="gpt-4o", name="my-agent", instructions="You are a helpful agent")
+        model="gpt-4o", name="my-agent", instructions="You are a helpful agent that writes detailed reports about health plans.",)
         # Create thread for communication
         thread = project_client.agents.create_thread()
         # Create message to thread
         message = project_client.agents.create_message(
             thread_id=thread.id,
             role="user",
-            content=f"Write a detailed report about {plan}.",
+            content=f"Write a detailed report about the {plan_name} plan. Here is the relevant information for the plan: {plan_info}.",
         )
 
         # Create and process agent run in thread with tools
