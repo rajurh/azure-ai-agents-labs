@@ -32,3 +32,11 @@ In Lab 4, you will be creating a multi-agent system consisting of 4 agents worki
 2. Report Agent - This agent will generate a detailed report about the health plan policy based on the information returned from the Search Agent.
 3. Validation Agent - This agent will validate that the generated report meets specified requirements. In our case, making sure that the report contains information about coverage exclusions.
 4. Orchestrator Agent - This agent will act as an orchestrator that manages the communication between the Search Agent, Report Agent, and Validation Agent.
+
+
+### Lab 5 - Develop a multi-agent system 
+The lab demonstrates how to build a streaming enterprise agent using Azure AI Agent Service. The agent can answer questions in real time using local HR and company policy documents and integrate external context via Bing. Main features of the lab include:
+1. Create or Reuse Agents Programmatically: Demonstrates how to connect to an Azure AI Foundry hub, either create a new agent with customized instructions (using GPT-4o or any supported model), or reuse an existing agent.
+2. Incorporate Vector Stores for Enterprise Data: Automatically create or reuse a vector store containing local policy files (e.g. HR, PTO, etc.) for retrieval-augmented generation (RAG).
+3. Integrate Server-Side Tools: Illustrates adding tools—like Bing search, file search, and custom Python functions—into a single ToolSet, and how to intercept and log each tool call.
+4. Build an Interactive Gradio UI: Provides a Gradio-based chat interface that prompts the agent with user questions, displays partial tool calls and final results, and makes it easy to extend or adapt the UI.
