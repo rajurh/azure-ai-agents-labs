@@ -3,22 +3,28 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 # solution plan
-# i. Convert 'Date' column to datetime
-# ii. Group data by 'Segment' and 'Product' and calculate total sales
-# iii. Create a bar plot to visualize the sales by segment for each product
+# i. Filter data for Carreterra in Germany for December
+# ii. Extract profit information
+# iii. Plot the profit
 
 def plot(data: pd.DataFrame):
+    # Filter data for Carreterra in Germany for December
     data['Date'] = pd.to_datetime(data['Date'], errors='coerce')
     data = data[pd.notna(data['Date'])]
-
-    sales_by_segment_product = data.groupby(['Segment', 'Product'])[' Sales'].sum().reset_index()
-
-    plt.figure(figsize=(12, 8))
-    sns.barplot(x='Product', y=' Sales', hue='Segment', data=sales_by_segment_product)
+    filtered_data = data[(data['Product'] == 'Carretera') & (data['Country'] == 'Germany') & (data['Month Name'] == 'December')]
+    
+    # Extract profit information
+    profit = filtered_data['Profit'].sum()
+    
+    # Plot the profit
+    plt.figure(figsize=(10, 6))
+    ax = sns.barplot(x=['Carretera'], y=[profit], palette='viridis')
+    ax.axhline(profit, color='red', linestyle='--', label=f'Profit: {profit:.2f}')
+    ax.legend()
     plt.xlabel('Product')
-    plt.ylabel('Total Sales')
-    plt.title('What are the key trends regarding product sales by segment per product type ?', wrap=True)
-    plt.legend(title='Segment')
+    plt.ylabel('Profit')
+    plt.title('What was the profit for Carreterra in Germany for Dec?', wrap=True)
+    
     return plt
 
 chart = plot(data)
