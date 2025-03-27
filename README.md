@@ -7,7 +7,7 @@ This repo contains hands-on labs for building AI Agents using the Azure AI Agent
 * Azure subscription
 * Azure AI Foundry resource with an AI Hub and AI Project (You will set this up in Lab 1)
 * Visual Studio Code
-* Python 3.10>
+* Python 3.10>, recommended <3.13
 * Azure CLI
 * Azure CLI Azure ML extension
 
@@ -21,7 +21,13 @@ Lab 1 walks you through how to setup the necessary lab environment for building 
 * Perform a simple Chat Completion call to the LLM to test that your lab environment is set up properly. 
 
 ### Lab 2 - Build a simple AI agent
-Lab 2 introduces you to AI agents in Azure. You will learn how to build a simple AI agent that generates a bar chart comparing costs between health insurance plans.
+Lab 2 introduces you to AI agents in Azure. You will learn how to build a simple AI agent that generates a bar chart comparing finance data..
+
+### Lab 2a - Build a Finance Analyst Agent
+In this lab, you will explore AI agents in Azure by building a simple AI agent that uses a data file to perform analysis. Specifically, you will learn how to generate RAG based analysis using uploaded finance data.
+
+### Lab 2b - Build a Data Scientist Agent
+In this lab, you will delve into the world of AI agents in Azure by constructing a sophisticated AI agent that utilizes a data file for comprehensive analysis. You will learn how to perform complex data science analysis using uploaded financial data.
 
 ### Lab 3 - Build a RAG Agent
 In Lab 3, you will be building an AI Agent that will perform Retrieval Augmented Generaton (RAG) on finance documents. Azure AI Search will be used as the vector database for storing the embeddings for the finance documents.
