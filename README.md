@@ -24,12 +24,12 @@ Lab 1 walks you through how to setup the necessary lab environment for building 
 Lab 2 introduces you to AI agents in Azure. You will learn how to build a simple AI agent that generates a bar chart comparing costs between health insurance plans.
 
 ### Lab 3 - Build a RAG Agent
-In Lab 3, you will be building an AI Agent that will perform Retrieval Augmented Generaton (RAG) on health plan documents. Azure AI Search will be used as the vector database for storing the embeddings for the health plan documents.
+In Lab 3, you will be building an AI Agent that will perform Retrieval Augmented Generaton (RAG) on finance documents. Azure AI Search will be used as the vector database for storing the embeddings for the finance documents.
 
 ### Lab 4 - Develop a multi-agent system
-In Lab 4, you will be creating a multi-agent system consisting of 4 agents working together to generate reports about health plan documents. You will build these 4 AI Agents:
-1. Search Agent - This agent will search an Azure AI Search index for information about specific health plan policies.
-2. Report Agent - This agent will generate a detailed report about the health plan policy based on the information returned from the Search Agent.
+In Lab 4, you will be creating a multi-agent system consisting of 4 agents working together to generate reports about finance documents. You will build these 4 AI Agents:
+1. Search Agent - This agent will search an Azure AI Search index for information about specific finance policies.
+2. Report Agent - This agent will generate a detailed report about the finance data based on the information returned from the Search Agent.
 3. Validation Agent - This agent will validate that the generated report meets specified requirements. In our case, making sure that the report contains information about coverage exclusions.
 4. Orchestrator Agent - This agent will act as an orchestrator that manages the communication between the Search Agent, Report Agent, and Validation Agent.
 
