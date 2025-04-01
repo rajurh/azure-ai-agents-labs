@@ -106,4 +106,4 @@ yarl==1.18.3
 zipp==3.21.0
 openpyxl==3.1.5
 lida==0.0.14
-basemap==1.4.1
+basemap
