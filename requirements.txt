@@ -5,10 +5,11 @@ annotated-types==0.7.0
 anyio==4.8.0
 asttokens==3.0.0
 attrs==24.3.0
-azure-ai-inference==1.0.0b8
-azure-ai-projects==1.0.0b5
+azure-ai-projects
+azure-ai-inference[prompts]
+azure-cli
 azure-core==1.32.0
-azure-identity==1.19.0
+azure-identity
 certifi==2024.12.14
 cffi==1.17.1
 chardet==5.2.0
@@ -78,7 +79,7 @@ PyJWT==2.10.1
 PyMeta3==0.5.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.0.1
-pywin32==308
+#pywin32==308
 PyYAML==6.0.2
 pyzmq==26.2.0
 referencing==0.35.1
